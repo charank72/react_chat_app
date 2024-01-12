@@ -1,0 +1,18 @@
+    <BrowserRouter>
+      <Routes>
+        <Route path={'/'} element={<Home/>} />
+        <Route path={'/login'} element={<Login/>} />
+        <Route path={'/register'} element={<Register/>} />
+        <Route path={'/*'} element={<Pnf/>} />
+
+      </Routes>
+
+    </BrowserRouter>
+
+     <div>
+      <h1>Home</h1>
+      <div className="container">
+        <NavLink to={'/login'}>Login</NavLink>
+        <NavLink to={'/register'}>Register</NavLink>
+      </div>
+    </div>
