@@ -7,11 +7,20 @@ import reportWebVitals from "./reportWebVitals";
 
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "react-toastify/dist/ReactToastify.css";
+import AuthPovider from "./Context/AuthContext";
+import ChatProvider from "./Context/ChatContext";
+
+
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    <AuthPovider>
+      <ChatProvider>
+        <App/>
+      </ChatProvider>
+      
+    </AuthPovider>
   </React.StrictMode>
 );
 

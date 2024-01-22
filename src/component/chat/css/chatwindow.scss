@@ -1,6 +1,103 @@
-
-
+$white:#fff;
+$chat:#dcf836;
+$bg-header:#ededed;
 .right-side{
-  background-color: blue;
+  background-color: $white;
+  background-image: url('https://i.pinimg.com/736x/8c/98/99/8c98994518b575bfd8c949e91d20548b.jpg');
   flex: 70%;
+
+  .header{
+    .imgText{
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      h4{
+        text-transform: capitalize;
+      }
+    }
+  }
+  //chat message
+  .chat-box{
+    position: relative;
+    width: 100%;
+    height: calc(100% - 120px);
+    padding: 50px;
+    overflow-y: auto;
+    .no-msg{
+      font-size: 3rem;
+      text-align: center;
+    }
+    .message{
+      position: relative;
+      width: 100%;
+      display: flex;
+      margin: 5px 0px;
+
+      &.sen{
+        // background-color: $white;
+        justify-content: flex-start;
+        
+      }
+      &.rec{
+        
+        justify-content: flex-end;
+      
+      }
+      
+      p{
+        position: relative;
+        right: 0;
+        text-align: right;
+        min-width: 5vw;
+        padding: 12px;
+        background-color: $chat;
+        border-radius: 10px;
+        font-size: 0.9rem;
+
+        &::before{
+          content: '';
+          position: absolute;
+          top: 0;
+          right: -12px;
+          height: 20px;
+          width: 20px;
+          background:linear-gradient(
+            135deg,
+            $chat 0%,
+            $chat 50%,
+            transparent 50%,
+            transparent
+          )
+        }
+        span{
+          display: block;
+          margin-top: 5px;
+          font-size: 0.8rem;
+          opacity: 0.5;
+        }
+      }
+    }
+
+  }
+  .chat-input{
+    margin: 0;
+    // background-color: transparent;
+    // padding: 10px;
+    // margin: 0 10px 0 10px;
+    // display: grid;
+    // grid-template-columns:  10% 80% 10%
+    ;
+
+    .inp-icons{
+      display: flex;
+      gap: 20px;
+      font-size: 1.4rem;
+     
+    }
+    // input{
+    //   width: 100%;
+    //   font-size: 1.4rem;
+    //   background-color: transparent;
+    // }
+  }
 }
