@@ -1,17 +1,15 @@
 import React, { useContext } from 'react'
 import {Navigate,Outlet} from 'react-router-dom';
+import Home from '../component/default/Home';
 import { AuthContext } from '../Context/AuthContext';
 
-function ProtectedRoute() {
+function ProtectedRoute(props) {
 
   const context=useContext(AuthContext);
-  const currentUser=context.currentUser
+  const loginStatus=context.loginStatus
+  const currentStatus=context.currentStatus
   return (
-    <React.Fragment>
-      {
-        currentUser?<Outlet/>:<Navigate to={'/login'}/>
-      }
-    </React.Fragment>
+   loginStatus?<Outlet/>:<Navigate to={'/login'}/>
   )
 }
 

@@ -12,7 +12,7 @@ function App(props) {
     <BrowserRouter>
     <ToastContainer autoClose='4000' position={'top-left'} />
       <Routes>
-        <Route element={<ProtectedRoute />}>
+        <Route element={<ProtectedRoute/>}>
           <Route path={"/"} element={<Home />} />
         </Route>
         <Route path={"/login"} element={<Login />} />

@@ -13,7 +13,7 @@ function Register(props) {
   const [user, setUser] = useState({
     name: "",
     email: "",
-    pass: "",
+    pass: "",//create
   });
   //navigate
     const navigate=useNavigate()
